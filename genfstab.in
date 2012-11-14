@@ -111,7 +111,7 @@ findmnt -Recvruno SOURCE,TARGET,FSTYPE,OPTIONS,FSROOT "$root" |
 
   # this is root
   target=${target#$root}
-  if [[ $target = / ]]; then
+  if [[ $target = / || -z $target ]]; then
     pass=1
   fi
 
